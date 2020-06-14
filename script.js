@@ -1,5 +1,4 @@
 const msgEl = document.getElementById('msg');
-console.log(`Number: ${randomNum}`);
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -65,7 +64,7 @@ const checkNumber = (msg) => {
 }
 
 
-
+console.log(`Number: ${randomNum}`);
 //Speak Result
 recognition.addEventListener('result', onSpeak);
 
