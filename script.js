@@ -49,7 +49,7 @@ const checkNumber = (msg) => {
     //Check number
     if(num === randomNum) {
         document.body.innerHTML = `<h2>
-        JACKPOT!!! YOU GOT IT RIGHT!! 
+        JACKPOT!!! You got the number right!! 
         <br>
         <br>
         It was ${num}
@@ -57,9 +57,9 @@ const checkNumber = (msg) => {
         <button class="play-again" id="play-again">Play again?</button>
         `;
     } else if(num > randomNum) {
-        msgEl.innerHTML += '<div>GO LOWER, YOU GUESSED TOO HIGH!!</div>';
+        msgEl.innerHTML += '<div>GO LOWER, you guessed too high!!</div>';
     } else {
-        msgEl.innerHTML += '<div>GO HIGHER BUDDY, YOUR NUMBER IS TOO LOW!!</div>';
+        msgEl.innerHTML += '<div>GO HIGHER buddy! Your number is too low!!</div>';
     }
 }
 
@@ -71,8 +71,8 @@ recognition.addEventListener('result', onSpeak);
 //Play again
 recognition.addEventListener('end', () => recognition.start());
 
-document.body.addEventListener('click', () => {
-    if(x.target.id == 'play-again') {
+document.body.addEventListener('click', e => {
+    if(e.target.id == 'play-again') {
         window.location.reload();
     }
 });
